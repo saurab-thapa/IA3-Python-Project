@@ -1,11 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
-
-USERS = {
-    "abc": "123",
-}
-
+from connect import *
+from Dashboard import *
 
 class LoginApp(tk.Tk):
     def __init__(self):
@@ -36,46 +33,38 @@ class LoginApp(tk.Tk):
         login_btn.pack(pady=20)
 
     def login(self):
-        username = self.username_entry.get()
-        password = self.password_entry.get()
+        self.username = self.username_entry.get()
+        self.password = self.password_entry.get()
+        self.access_level=self.verify()
 
-        if username in USERS and USERS[username] == password:
-            messagebox.showinfo("Login Successful", f"Welcome, {username}!")
+        if self.access_level==1:
+            messagebox.showinfo("Login Successful", f"Welcome, {self.username}!")
             self.destroy()
-            dashboard = DashboardApp(username)
+            dashboard = DashboardUser(self.username)
+            dashboard.mainloop()
+        elif self.access_level==0:
+            messagebox.showinfo("Login Successful", f"Welcome, {self.username}!")
+            self.destroy()
+            dashboard = DashboardUser(self.username)
             dashboard.mainloop()
         else:
             messagebox.showerror("Login Failed", "Invalid username or password.")
 
-
-class DashboardApp(tk.Tk):
-    def __init__(self, username):
-        super().__init__()
-        self.title("Dashboard - Student Analyzer",)
-        self.geometry("600x400")
-        self.username = username
-
-        self.create_widgets()
-
-    def create_widgets(self):
-        greeting = ttk.Label(self, text=f"Welcome, {self.username}", font=("Times New Roman", 30))
-        greeting.pack(pady=15)
-
-        btn_frame = ttk.Frame(self)
-        btn_frame.pack(pady=10)
-
-        buttons = [
-            "Enter Attendance",
-            "View Performance",
-            "Export Report",
-            "Logout"
-        ]
-
-        for text in buttons:
-            action_btn = ttk.Button(btn_frame, text=text, width=30)
-            action_btn.pack(pady=8)
+    def verify(self):
+        conn = sqlcon()
+        cursor = conn.cursor()
+        cursor.execute("SELECT access_level FROM users WHERE username=%s AND pass=%s", (self.username, self.password))
+        result = cursor.fetchone()
+        conn.close()
+        print(result)
+        if result == None:
+            return 3
+        elif result[0]=="Admin":
+            return 0
+        else:
+            return 1
+        
 
 
-if __name__ == "__main__":
-    app = LoginApp()
-    app.mainloop()
+app = LoginApp()
+app.mainloop()
