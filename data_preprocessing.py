@@ -56,4 +56,4 @@ class PredictorGUI:
         for row in self.tree.get_children():
             self.tree.delete(row)
         for _, row in data.iterrows():
-            self.tree.insert('', tk.END, values=(row['Student_ID'], row['name'], row['Predicted_Result']))
+            self.tree.insert('', tk.END, values=(row['Student_ID'], row['Name'], row['Predicted_Result']))

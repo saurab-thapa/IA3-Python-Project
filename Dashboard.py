@@ -38,7 +38,7 @@ class BaseDashboard(tk.Tk):
             messagebox.showinfo("Success", f"Attendance sheet saved. Please edit and upload after marking.")
 
             conn.close()
-            self.upload_updated_attendance()
+            
 
         except Exception as e:
             messagebox.showerror("Error", str(e))
@@ -97,7 +97,7 @@ class DashboardUser(BaseDashboard):
     def __init__(self, username):
         super().__init__(username)
         self.title("Dashboard - Student Analyzer")
-        self.geometry("600x400")
+        self.geometry("500x400")
         self.create_widgets()
 
     def create_widgets(self):
@@ -122,7 +122,7 @@ class DashboardAdmin(BaseDashboard):
     def __init__(self, username):
         super().__init__(username)
         self.title("Dashboard - Admin Panel")
-        self.geometry("800x600")
+        self.geometry("500x400")
         self.create_widgets()
 
     def create_widgets(self):
@@ -158,6 +158,8 @@ class DashboardAdmin(BaseDashboard):
         def submit_student():
            student_id = id_entry.get()
            name = name_entry.get()
+           gender=Gender.get()
+           age=age_entry.get()
            attendance = float(attendance_entry.get())
            behavior = behavior_entry.get()
            participation = participation_entry.get()
@@ -165,9 +167,9 @@ class DashboardAdmin(BaseDashboard):
            final_score = float(final_score_entry.get())
 
            try:
-                self.cursor.execute("""INSERT INTO details (Student_ID, Name, Attendance_Percent, Behavior_Rating, Participation, 
+                self.cursor.execute("""INSERT INTO details (Student_ID, Name, Gender,Age, Attendance_Percent, Behavior_Rating, Participation, 
                                     Absences, Final_Exam_Score)      VALUES (%s, %s, %s, %s, %s, %s, %s)""", 
-                                    (student_id, name, attendance, behavior, participation, absences, final_score))
+                                    (student_id, name,gender,age, attendance, behavior, participation, absences, final_score))
     
                 self.conn.commit()
            except Exception as e:
@@ -184,24 +186,32 @@ class DashboardAdmin(BaseDashboard):
         id_entry = ttk.Entry(window)
         id_entry.grid(row=1, column=1, padx=10, pady=5, sticky='w')
 
-        tk.Label(window, text="Attendance Percent").grid(row=2, column=0, padx=10, pady=5, sticky='w')
+        Gender = tk.StringVar()
+        tk.Radiobutton(window, text="Male", variable=Gender, value="male").grid(row=2, column=0, padx=10, pady=5, sticky='w')
+        tk.Radiobutton(window, text="Female", variable=Gender, value="Female").grid(row=2, column=1, padx=10, pady=5, sticky='w')
+
+        tk.Label(window, text="Age:").grid(row=3, column=0, padx=10, pady=5, sticky='w')
+        age_entry = ttk.Entry(window)
+        age_entry.grid(row=3, column=1, padx=10, pady=5, sticky='w')
+
+        tk.Label(window, text="Attendance Percent").grid(row=4, column=0, padx=10, pady=5, sticky='w')
         attendance_entry = tk.Entry(window)
-        attendance_entry.grid(row=2, column=1, padx=10, pady=5)
+        attendance_entry.grid(row=4, column=1, padx=10, pady=5)
 
-        tk.Label(window, text="Behavior Rating").grid(row=3, column=0, padx=10, pady=5, sticky='w')
+        tk.Label(window, text="Behavior Rating").grid(row=5, column=0, padx=10, pady=5, sticky='w')
         behavior_entry = tk.Entry(window)
-        behavior_entry.grid(row=3, column=1, padx=10, pady=5)
+        behavior_entry.grid(row=5, column=1, padx=10, pady=5)
 
-        tk.Label(window, text="Participation").grid(row=4, column=0, padx=10, pady=5, sticky='w')
+        tk.Label(window, text="Participation").grid(row=6, column=0, padx=10, pady=5, sticky='w')
         participation_entry = tk.Entry(window)
-        participation_entry.grid(row=4, column=1, padx=10, pady=5)
+        participation_entry.grid(row=6, column=1, padx=10, pady=5)
 
-        tk.Label(window, text="Absences").grid(row=5, column=0, padx=10, pady=5, sticky='w')
+        tk.Label(window, text="Absences").grid(row=7, column=0, padx=10, pady=5, sticky='w')
         absences_entry = tk.Entry(window)
-        absences_entry.grid(row=5, column=1, padx=10, pady=5)
+        absences_entry.grid(row=7, column=1, padx=10, pady=5)
 
-        tk.Label(window, text="Final Exam Score").grid(row=6, column=0, padx=10, pady=5, sticky='w')
+        tk.Label(window, text="Final Exam Score").grid(row=8, column=0, padx=10, pady=5, sticky='w')
         final_score_entry = tk.Entry(window)
-        final_score_entry.grid(row=6, column=1, padx=10, pady=5)
+        final_score_entry.grid(row=8, column=1, padx=10, pady=5)
 
-        ttk.Button(window, text="Add Student", command=submit_student).grid(row=7, column=0, padx=10, pady=5, sticky='w')
+        ttk.Button(window, text="Add Student", command=submit_student).grid(row=9, column=0, padx=10, pady=5, sticky='w')

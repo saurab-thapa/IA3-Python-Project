@@ -4,6 +4,7 @@ from tkinter import messagebox
 from connect import *
 from Dashboard import *
 
+
 class LoginApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -56,13 +57,12 @@ class LoginApp(tk.Tk):
         cursor.execute("SELECT access_level FROM users WHERE username=%s AND pass=%s", (self.username, self.password))
         result = cursor.fetchone()
         conn.close()
-        print(result)
         if result == None:
             return 3
-        elif result[0]=="Admin":
-            return 0
-        else:
+        elif result[0]=="admin":
             return 1
+        elif result[0]=="User":
+            return 0
         
 
 
