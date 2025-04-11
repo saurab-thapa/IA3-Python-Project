@@ -40,7 +40,7 @@ class LoginApp(tk.Tk):
         if self.access_level==1:
             messagebox.showinfo("Login Successful", f"Welcome, {self.username}!")
             self.destroy()
-            dashboard = DashboardUser(self.username)
+            dashboard = DashboardAdmin(self.username)
             dashboard.mainloop()
         elif self.access_level==0:
             messagebox.showinfo("Login Successful", f"Welcome, {self.username}!")

@@ -1,0 +1,101 @@
+ID,Name,Roll Number,Attendance,Marks
+S001,Student_1,Male,16,87.08,51,48,37,14.70,High School,No,Yes,Excellent,Yes,6,80.25,Pass
+S002,Student_2,Male,20,80.10,91,45,89,8.40,PhD,No,Yes,Good,No,10,82.70,Pass
+S003,Student_3,Female,17,60.77,63,33,31,7.60,Master,No,No,Excellent,No,3,73.60,Pass
+S004,Student_4,Female,16,77.60,100,99,66,11.50,High School,Yes,Yes,Average,Yes,7,94.45,Pass
+S005,Student_5,Male,19,63.90,66,40,67,7.10,Master,Yes,Yes,Good,Yes,14,72.70,Pass
+S006,Student_6,Female,18,99.48,91,48,61,16.90,High School,Yes,Yes,Average,No,8,89.85,Pass
+S007,Student_7,Male,17,95.66,92,60,47,13.10,PhD,No,Yes,Average,Yes,7,87.10,Pass
+S008,Student_8,Female,20,71.42,94,71,66,4.40,Bachelor,No,Yes,Excellent,Yes,4,83.75,Pass
+S009,Student_9,Male,19,79.82,69,68,96,19.90,Master,Yes,Yes,Average,No,3,98.55,Pass
+S010,Student_10,Female,19,57.91,20,53,84,15.20,High School,No,Yes,Good,No,5,82.05,Pass
+S011,Student_11,Male,20,66.21,22,34,66,17.60,Master,Yes,Yes,Good,Yes,2,81.60,Pass
+S012,Student_12,Female,16,98.90,88,36,36,13.20,Bachelor,No,No,Good,Yes,9,80.90,Pass
+S013,Student_13,Female,18,71.91,86,77,35,5.00,High School,No,Yes,Good,Yes,0,82.95,Pass
+S014,Student_14,Male,16,61.45,24,62,29,10.30,Master,No,Yes,Good,No,7,72.60,Pass
+S015,Student_15,Female,19,59.52,32,75,65,8.50,PhD,Yes,Yes,Excellent,No,10,76.05,Pass
+S016,Student_16,Male,17,59.58,88,77,37,8.40,Master,No,Yes,Excellent,No,3,85.35,Pass
+S017,Student_17,Male,20,91.80,31,50,41,8.10,PhD,Yes,No,Excellent,Yes,12,68.35,Pass
+S018,Student_18,Male,19,63.26,78,56,74,13.90,PhD,Yes,Yes,Average,Yes,1,90.90,Pass
+S019,Student_19,Male,18,52.86,94,81,84,18.40,Bachelor,Yes,Yes,Good,Yes,2,100.00,Fail
+S020,Student_20,Male,19,81.14,92,51,94,11.90,High School,No,No,Poor,Yes,1,78.00,Fail
+S021,Student_21,Male,18,68.86,58,78,60,18.60,High School,Yes,No,Average,Yes,0,76.00,Fail
+S022,Student_22,Female,17,91.43,28,51,67,5.70,PhD,No,Yes,Good,Yes,0,94.00,Fail
+S023,Student_23,Female,16,89.14,90,39,54,5.60,Bachelor,No,Yes,Good,Yes,0,92.30,Fail
+S024,Student_24,Male,16,81.71,55,25,20,6.70,Bachelor,No,Yes,Poor,No,0,70.70,Fail
+S025,Student_25,Male,16,82.00,39,89,24,16.70,Bachelor,No,Yes,Average,No,1,80.00,Fail
+S026,Student_26,Male,18,90.00,51,33,65,15.60,PhD,Yes,Yes,Good,Yes,1,88.00,Fail
+S027,Student_27,Male,17,77.14,62,72,51,5.30,High School,No,Yes,Good,Yes,1,85.00,Fail
+S028,Student_28,Female,18,62.86,49,48,23,13.20,PhD,No,No,Poor,Yes,1,68.00,Fail
+S029,Student_29,Female,20,66.56,23,34,53,3.60,Master,Yes,Yes,Poor,No,10,62.45,Pass
+S030,Student_30,Female,20,99.21,34,69,93,3.80,High School,No,Yes,Good,No,13,72.05,Pass
+S031,Student_31,Male,18,81.16,35,58,84,6.20,PhD,No,No,Average,Yes,6,75.55,Pass
+S032,Student_32,Female,19,83.87,42,98,92,6.00,High School,No,No,Good,No,10,81.20,Pass
+S033,Student_33,Female,19,72.11,47,85,80,15.90,Bachelor,Yes,No,Average,Yes,7,90.20,Pass
+S034,Student_34,Female,17,90.33,38,23,25,4.90,PhD,Yes,No,Poor,Yes,12,60.55,Pass
+S035,Student_35,Female,19,62.20,20,33,74,4.40,PhD,Yes,Yes,Excellent,No,4,67.75,Pass
+S036,Student_36,Female,20,99.39,96,60,76,12.30,PhD,No,Yes,Poor,No,8,89.30,Pass
+S037,Student_37,Male,18,88.29,86,82,100,4.80,PhD,Yes,No,Good,No,10,85.00,Pass
+S038,Student_38,Female,20,54.03,39,49,69,13.90,Bachelor,Yes,No,Poor,No,14,77.00,Pass
+S039,Student_39,Female,16,60.34,73,69,94,18.90,High School,No,No,Excellent,No,9,95.10,Pass
+S040,Student_40,Female,19,76.91,89,97,48,9.80,Master,No,No,Excellent,No,10,87.50,Pass
+S041,Student_41,Female,17,92.03,36,99,88,0.50,PhD,Yes,Yes,Poor,Yes,14,72.55,Pass
+S042,Student_42,Male,16,63.01,61,47,78,6.50,PhD,No,No,Average,Yes,15,73.00,Pass
+S043,Student_43,Male,20,52.60,64,48,28,15.60,High School,Yes,Yes,Good,Yes,4,83.20,Pass
+S044,Student_44,Male,17,73.68,34,92,47,9.30,Master,No,Yes,Excellent,Yes,9,78.40,Pass
+S045,Student_45,Male,20,51.28,59,93,68,7.90,Bachelor,Yes,Yes,Excellent,No,3,86.00,Pass
+S046,Student_46,Male,18,76.64,67,28,84,13.00,High School,No,No,Excellent,No,11,80.15,Pass
+S047,Student_47,Female,17,71.77,86,54,98,16.20,PhD,No,No,Average,No,7,93.50,Pass
+S048,Student_48,Male,18,94.08,51,79,92,12.20,PhD,No,Yes,Poor,No,5,88.40,Pass
+S049,Student_49,Female,17,67.74,53,63,55,17.60,Master,Yes,Yes,Excellent,Yes,13,84.00,Pass
+S050,Student_50,Female,20,87.91,80,82,77,15.90,High School,No,Yes,Poor,Yes,9,93.40,Pass
+S051,Student_51,Female,19,77.67,64,74,90,6.60,PhD,No,No,Average,Yes,3,84.80,Pass
+S052,Student_52,Male,18,55.98,88,43,44,4.30,PhD,No,No,Excellent,Yes,9,73.85,Pass
+S053,Student_53,Male,18,58.97,21,88,36,5.50,High School,No,Yes,Poor,Yes,0,75.45,Pass
+S054,Student_54,Female,19,73.94,63,43,26,5.00,PhD,Yes,Yes,Poor,No,2,72.50,Pass
+S055,Student_55,Male,17,57.46,92,58,30,19.90,High School,No,Yes,Poor,No,14,88.40,Pass
+S056,Student_56,Female,20,99.50,59,92,99,1.20,High School,Yes,Yes,Average,Yes,5,81.25,Pass
+S057,Student_57,Male,17,77.60,40,20,72,9.00,PhD,No,Yes,Good,No,9,70.70,Pass
+S058,Student_58,Female,16,84.37,53,100,95,13.20,Bachelor,No,Yes,Good,Yes,8,91.65,Pass
+S059,Student_59,Male,16,52.98,59,96,92,18.40,PhD,Yes,No,Average,No,8,96.85,Pass
+S060,Student_60,Female,19,54.02,25,75,61,12.10,High School,Yes,Yes,Excellent,No,1,82.70,Pass
+S061,Student_61,Male,19,75.95,76,55,43,19.90,PhD,No,Yes,Poor,No,13,87.35,Pass
+S062,Student_62,Female,18,83.51,40,62,72,13.90,Master,No,Yes,Poor,Yes,10,81.40,Pass
+S063,Student_63,Female,18,55.80,71,85,20,13.20,PhD,No,Yes,Good,No,15,81.10,Pass
+S064,Student_64,Female,16,60.18,90,36,56,8.80,PhD,Yes,Yes,Good,Yes,9,78.80,Pass
+S065,Student_65,Male,20,70.40,48,34,79,18.90,Bachelor,No,No,Average,No,15,81.60,Pass
+S066,Student_66,Female,17,72.84,38,69,44,18.40,Bachelor,Yes,No,Poor,No,8,84.85,Pass
+S067,Student_67,Male,18,86.30,95,94,82,17.30,PhD,No,No,Average,No,14,96.85,Pass
+S068,Student_68,Female,17,99.04,50,93,69,4.70,PhD,Yes,No,Poor,No,12,77.05,Pass
+S069,Student_69,Male,19,98.24,36,84,95,6.60,High School,No,Yes,Poor,Yes,4,82.10,Pass
+S070,Student_70,Female,17,53.74,53,63,99,13.90,High School,No,No,Average,No,1,90.70,Pass
+S071,Student_71,Male,17,81.56,56,49,31,8.70,High School,Yes,No,Good,No,0,77.55,Pass
+S072,Student_72,Male,18,89.81,57,65,67,8.60,Bachelor,No,Yes,Good,Yes,2,82.60,Pass
+S073,Student_73,Female,20,84.16,83,94,38,4.60,Master,No,No,Excellent,No,9,80.45,Pass
+S074,Student_74,Male,16,72.09,64,95,58,12.80,PhD,No,No,Average,Yes,12,86.45,Pass
+S075,Student_75,Female,16,61.86,93,65,93,5.90,Master,Yes,No,Average,Yes,1,88.40,Pass
+S076,Student_76,Female,18,88.79,49,97,65,4.40,Bachelor,No,Yes,Excellent,Yes,9,78.30,Pass
+S077,Student_77,Female,16,78.98,36,31,57,6.50,PhD,Yes,Yes,Good,No,8,68.25,Pass
+S078,Student_78,Male,18,95.70,81,57,63,16.10,PhD,Yes,Yes,Good,No,11,87.60,Pass
+S079,Student_79,Male,19,50.70,88,35,78,7.40,Master,No,No,Excellent,Yes,15,76.15,Pass
+S080,Student_80,Male,20,94.21,91,61,98,4.40,High School,No,No,Poor,Yes,4,85.00,Pass
+S081,Student_81,Male,16,65.22,83,34,32,4.70,Bachelor,No,No,Average,No,4,73.45,Pass
+S082,Student_82,Female,16,91.68,98,72,55,0.70,Master,Yes,No,Poor,Yes,11,76.20,Pass
+S083,Student_83,Male,18,77.22,65,27,70,5.50,High School,No,Yes,Good,Yes,1,75.80,Pass
+S084,Student_84,Female,17,99.44,92,46,28,16.60,Bachelor,Yes,Yes,Average,Yes,0,90.10,Pass
+S085,Student_85,Female,17,99.38,89,52,42,2.20,High School,Yes,Yes,Average,Yes,10,72.55,Pass
+S086,Student_86,Male,17,63.27,36,73,87,2.30,High School,No,No,Average,Yes,14,70.35,Pass
+S087,Student_87,Male,20,52.17,86,58,78,12.90,High School,Yes,No,Poor,No,3,90.80,Pass
+S088,Student_88,Female,19,53.67,30,61,97,3.00,Bachelor,No,No,Poor,No,14,69.35,Pass
+S089,Student_89,Female,16,89.65,34,90,47,8.60,Bachelor,No,No,Poor,No,13,75.40,Pass
+S090,Student_90,Male,18,71.34,52,67,39,13.70,PhD,Yes,Yes,Excellent,Yes,13,78.95,Pass
+S091,Student_91,Male,18,90.59,91,27,95,19.10,Master,Yes,No,Average,No,1,95.80,Pass
+S092,Student_92,Female,20,65.62,33,93,84,4.30,PhD,Yes,Yes,Average,No,3,80.10,Pass
+S093,Student_93,Female,20,61.31,74,91,99,12.30,High School,No,Yes,Good,No,9,92.45,Pass
+S094,Student_94,Female,18,50.31,38,92,71,1.40,High School,Yes,Yes,Poor,No,14,71.00,Pass
+S095,Student_95,Female,17,68.50,61,92,96,1.70,High School,Yes,Yes,Excellent,Yes,8,80.25,Pass
+S096,Student_96,Female,19,74.28,76,73,54,4.30,High School,No,No,Excellent,No,15,74.55,Pass
+S097,Student_97,Female,16,61.03,96,27,20,4.10,Bachelor,Yes,No,Average,No,3,73.05,Pass
+S098,Student_98,Male,19,87.35,42,36,68,10.70,Bachelor,No,Yes,Poor,Yes,13,72.70,Pass
+S099,Student_99,Male,19,96.06,60,93,74,11.50,PhD,No,Yes,Poor,Yes,10,86.85,Pass
+S100,Student_100,Male,20,73.00,66,31,75,16.90,Bachelor,No,No,Excellent,No,9,84.45,Pass
