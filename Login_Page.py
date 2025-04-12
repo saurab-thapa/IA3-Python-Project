@@ -4,7 +4,6 @@ from tkinter import messagebox
 from connect import *
 from Dashboard import *
 
-
 class LoginApp(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -19,31 +18,28 @@ class LoginApp(tk.Tk):
         frame = ttk.Frame(self)
         frame.pack(pady=10)
 
-    
         ttk.Label(frame, text="Username:").grid(row=0, column=0, pady=5, sticky="e")
         self.username_entry = ttk.Entry(frame)
         self.username_entry.grid(row=0, column=1, pady=5)
 
-  
         ttk.Label(frame, text="Password:").grid(row=1, column=0, pady=5, sticky="e")
         self.password_entry = ttk.Entry(frame, show="*")
         self.password_entry.grid(row=1, column=1, pady=5)
 
-       
         login_btn = ttk.Button(self, text="Login", command=self.login)
         login_btn.pack(pady=20)
 
     def login(self):
         self.username = self.username_entry.get()
         self.password = self.password_entry.get()
-        self.access_level=self.verify()
+        self.access_level = self.verify()
 
-        if self.access_level==1:
+        if self.access_level == 1:
             messagebox.showinfo("Login Successful", f"Welcome, {self.username}!")
             self.destroy()
             dashboard = DashboardAdmin(self.username)
             dashboard.mainloop()
-        elif self.access_level==0:
+        elif self.access_level == 0:
             messagebox.showinfo("Login Successful", f"Welcome, {self.username}!")
             self.destroy()
             dashboard = DashboardUser(self.username)
@@ -57,14 +53,12 @@ class LoginApp(tk.Tk):
         cursor.execute("SELECT access_level FROM users WHERE username=%s AND pass=%s", (self.username, self.password))
         result = cursor.fetchone()
         conn.close()
-        if result == None:
+        if result is None:
             return 3
-        elif result[0]=="admin":
+        elif result[0] == "admin":
             return 1
-        elif result[0]=="User":
+        elif result[0] == "User":
             return 0
-        
-
 
 app = LoginApp()
 app.mainloop()

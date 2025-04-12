@@ -1,21 +1,26 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, messagebox
 import pandas as pd
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
-from connect import *
+from connect import * 
 
 def fetch_details_data():
-    conn = sqlcon()
-    query = "SELECT * FROM details"
-    df = pd.read_sql(query, conn)
-    conn.close()
-    return df
+    try:
+        conn = sqlcon()
+        query = "SELECT * FROM details"
+        df = pd.read_sql(query, conn)
+        conn.close()
+        return df
+    except Exception as e:
+        messagebox.showerror("Database Error", f"An error occurred while fetching data: {e}")
+        return pd.DataFrame() 
 
 def train_model():
     df = fetch_details_data()
-
+    df = df.dropna()
+    if df.empty:
+        return pd.DataFrame()
     label_cols = ['Name', 'Gender', 'Parent_Education', 'Internet_Access',
                   'Extra_Coaching', 'Behavior_Rating', 'Participation', 'Final_Result']
     le = LabelEncoder()
@@ -34,18 +39,18 @@ def train_model():
     return df[['Student_ID', 'Name', 'Predicted_Result']]
 
 class PredictorGUI:
-    def __init__(self, root):
-        self.root = root
-        self.root.title("Student Performance Predictor")
-        self.root.geometry("600x400")
+    def __init__(self, windowp):
+        self.windowp = windowp
+        self.windowp.title("Student Performance Predictor")
+        self.windowp.geometry("600x400")
 
-        title = tk.Label(root, text="Predict Student Final Results", font=("Arial", 16, "bold"))
+        title = tk.Label(windowp, text="Predict Student Final Results", font=("Arial", 16, "bold"))
         title.pack(pady=10)
 
-        self.button = tk.Button(root, text="Train and Predict", command=self.show_predictions)
+        self.button = tk.Button(windowp, text="Predict", command=self.show_predictions)
         self.button.pack(pady=10)
 
-        self.tree = ttk.Treeview(root, columns=("ID", "Name", "Result"), show='headings')
+        self.tree = ttk.Treeview(windowp, columns=("ID", "Name", "Result"), show='headings')
         self.tree.heading("ID", text="Student ID")
         self.tree.heading("Name", text="Name")
         self.tree.heading("Result", text="Predicted_Result")
@@ -53,7 +58,14 @@ class PredictorGUI:
 
     def show_predictions(self):
         data = train_model()
+        if data.empty:
+            messagebox.showerror("No Data", "No data available or an error occurred.")
+            return
+        
         for row in self.tree.get_children():
             self.tree.delete(row)
+        
         for _, row in data.iterrows():
             self.tree.insert('', tk.END, values=(row['Student_ID'], row['Name'], row['Predicted_Result']))
+
+
